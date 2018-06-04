@@ -29,6 +29,7 @@ import {CcblRootComponent} from './ccbl-root/ccbl-root.component';
 import {appRoutes} from './routes';
 import { PipoComponent } from './pipo/pipo.component';
 import { DialogAppendCcblFromBrickComponent } from './dialog-append-ccbl-from-brick/dialog-append-ccbl-from-brick.component';
+import {CcblGfxModule, CcblGfxService} from "ccbl-gfx";
 
 @NgModule({
   declarations: [
@@ -67,9 +68,10 @@ import { DialogAppendCcblFromBrickComponent } from './dialog-append-ccbl-from-br
     BrowserAnimationsModule, MatToolbarModule, MatMenuModule, MatIconModule, MatFormFieldModule, MatInputModule,
     MatSliderModule,
     MatDialogModule, MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    CcblGfxModule
   ],
-  providers: [TacthabService],
+  providers: [TacthabService, CcblGfxService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
